@@ -1,6 +1,8 @@
 # Storyteller
 Storyteller is a JSON to CoreAnimation conversion library that you could use to create awesome tales 
 
+<img src="http://i.giphy.com/3xz2BzhsHzBOKsFWi4.gif"/>
+
 ## Installation
 
 1. Drag and drop the AnimationEngine folder to your project.
