@@ -1,0 +1,217 @@
+ [{
+  
+  "id_view" : "view_name_1",
+  "bounds": [0, 0, 425, 294],
+  "position": [325, 377],
+  "opacity" : 1,
+  "anchorPoint" : [0.5, 0.5],
+  "image" : "cara.png",
+  "layers" : [
+          {
+          "id_layer" : "layer-oreja-izquierda",
+          "bounds" : [0, 0, 133, 159],
+          "position" : [180, 50],
+          "opacity" : 0.3,
+          "anchorPoint" : [1, 1],
+          "image" : "orejaizq.png"
+          },
+          {
+          "id_layer" : "layer-oreja-derecha",
+          "bounds" : [0, 0, 132, 156],
+          "position" : [250, 50],
+          "opacity" : 1,
+          "anchorPoint" : [0, 1],
+          "image" : "orejadcha.png"
+          }
+    ],
+  "animations" : [
+                  {
+                      "id_animation" : "animation_oreja_izq",
+                      "keyPath" : "transform.rotation.z",
+                      "fromValue" : {
+                      "type" : "number",
+                      "value" : 0
+                      },
+                      "toValue" : {
+                      "type" : "number",
+                      "value" : 0.8
+                      },
+                      "duration" : 0.1,
+                      "autoreverses" : "YES",
+                      "repeatCount" : 5,
+                      "timingFunction" : "EaseInEaseOut",
+                      "removedOnCompletion" : "NO"
+                  },
+                  {
+                      "id_animation" : "animation_oreja_dcha",
+                      "keyPath" : "transform.rotation.z",
+                      "fromValue" : {
+                      "type" : "number",
+                      "value" : 0
+                      },
+                      "toValue" : {
+                      "type" : "number",
+                      "value" : -0.8
+                      },
+                      "duration" : 0.4,
+                      "autoreverses" : "YES",
+                      "repeatCount" : 1,
+                      "timingFunction" : "EaseInEaseOut",
+                      "removedOnCompletion" : "NO"
+                  }
+                  ],
+  "group_animations" : {
+      "group_name_1" :{
+          "options_group" : {
+              "autoreverses" : "NO",
+              "repeatCount" : 3
+          },
+          "animations" : ["animation_oreja_izq", "animation_oreja_dcha"]
+      },
+      "group_name_2" : {
+          "options_group" : {
+              "autoreverses" : "NO",
+              "repeatCount" : 2
+          },
+          "animations" : ["animation_oreja_dcha"]
+      }
+  },
+  "actions" : {
+  "tap" :
+              [
+                       [
+                            {
+                                "layer": "layer-oreja-izquierda",
+                                "anims" : ["animation_oreja_izq"]
+                            }
+                        ],
+                       [
+                        
+                            {
+                                "layer": "__all_layers_composition__",
+                                "anims" : ["animation_oreja_dcha"]
+                            }
+                        ],
+                       [
+                            {
+                            "layer": "layer-oreja-derecha",
+                            "anims" : ["group_name_1"]
+                            }
+                        ]
+               ]
+  }
+  },
+  {
+  "id_view" : "view_name_2",
+  "bounds": [0, 0, 425, 294],
+  "position": [800, 300],
+  "opacity" : 1,
+  "anchorPoint" : [0.5, 0.5],
+  "image" : "cara.png",
+  "layers" : [
+              {
+              "id_layer" : "layer-oreja-izquierda2",
+              "bounds" : [0, 0, 133, 159],
+              "position" : [180, 50],
+              "opacity" : 0.3,
+              "anchorPoint" : [1, 1],
+              "image" : "orejaizq.png"
+              },
+              {
+              "id_layer" : "layer-oreja-derecha2",
+              "bounds" : [0, 0, 132, 156],
+              "position" : [250, 50],
+              "opacity" : 1,
+              "anchorPoint" : [0, 1],
+              "image" : "orejadcha.png"
+              }
+              ],
+  "animations" : [
+                  {
+                  "id_animation" : "animation_oreja_izq2",
+                  "keyPath" : "transform.rotation.z",
+                  "fromValue" : {
+                      "type" : "number",
+                      "value" : 0
+                  },
+                  "toValue" : {
+                      "type" : "number",
+                      "value" : 0.8
+                  },
+                  "duration" : 0.4,
+                  "autoreverses" : "YES",
+                  "repeatCount" : 3,
+                  "timingFunction" : "EaseInEaseOut",
+                  "removedOnCompletion" : "NO"
+                  },
+                  {
+                  "id_animation" : "animation_oreja_dcha2",
+                  "keyPath" : "transform.rotation.z",
+                  "fromValue" : {
+                  "type" : "number",
+                  "value" : 0
+                  },
+                  "toValue" : {
+                  "type" : "number",
+                  "value" : -0.8
+                  },
+                  "duration" : 0.4,
+                  "autoreverses" : "YES",
+                  "repeatCount" : 2,
+                  "timingFunction" : "EaseInEaseOut",
+                  "removedOnCompletion" : "NO"
+                  }
+                  ],
+  "group_animations" : {
+      "group_name_12" :{
+          "options_group" : {
+          "autoreverses" : "NO",
+          "repeatCount" : 3
+            },
+            "animations" : ["animation_oreja_izq2", "animation_oreja_dcha2"]
+        },
+      "group_name_22" : {
+          "options_group" : {
+          "autoreverses" : "NO",
+          "repeatCount" : 4
+          },
+          "animations" : ["animation_oreja_dcha2"]
+      }
+  },
+  "actions" : {
+  "inTime" :
+  [ 3.5,
+   [
+    {
+    "layer": "layer-oreja-izquierda2",
+    "anims" : ["animation_oreja_izq2"]
+    }
+    ],
+
+   [
+    
+    {
+    "layer": "__all_layers_composition__",
+    "anims" : ["animation_oreja_dcha2"]
+    }
+    ]
+   ],
+  "tap" :
+  [
+   [
+    {
+    "layer": "layer-oreja-izquierda2",
+    "anims" : ["animation_oreja_izq2"]
+    }
+    ],
+   [
+    
+    {
+    "layer": "__all_layers_composition__",
+    "anims" : ["animation_oreja_dcha2"]
+    }
+    ]
+   ]
+  }
+  }
+  ]

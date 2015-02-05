@@ -1,0 +1,369 @@
+[{
+ "leftArrow" : "leftiPhone.png",
+ "rightArrow" : "rightiPhone.png",
+ "mainMenu" : "leftiPhone.png",
+ "nextPages": [
+               {
+               "idPage" : "simpleiP5",
+               "image" : "flecha.png"
+               }
+               ],
+ "prevPages": [
+               {
+               "idPage" : "simpleiP5",
+               "image" : "flecha.png"
+               }
+               ]
+ },
+  {
+  "id_view" : "fondo1",
+  "bounds": [0, 0, 568, 436],
+  "position": [568, 436],
+  "anchorPoint" : [1, 1],
+  "image" : "fondo1.png"
+  },
+  {
+  "id_view" : "ola1",
+  "bounds": [0, 0, 866.2, 200.2],
+  "position": [0, 200],
+  "opacity" : 1,
+  "anchorPoint" : [0, 0],
+  "image" : "olas1_2.png",
+  "layers" :[],
+  "animations" : [
+                  {
+                  "id_animation" : "mover_ola_1",
+                  "keyPath" : "transform.translation.x",
+                  "fromValue" : {
+                  "type" : "number",
+                  "value" : 0
+                  },
+                  "toValue" : {
+                  "type" : "number",
+                  "value" : -147
+                  },
+                  "duration" : 3,
+                  "autoreverses" : "YES",
+                  "repeatCount" : "INFINITY",
+                  "timingFunction" : "EaseInEaseOut",
+                  "removedOnCompletion" : "NO"
+                  }
+                  ],
+  "actions" : {
+  "inTime" :
+  [     0.5,
+   [
+    {
+    "layer": "__all_layers_composition__",
+    "anims" : ["mover_ola_1"],
+    "sound" : {"repeat" : -1, "file" : "olas.mp3"}
+    }
+    ]
+   ]
+  }
+  },
+  {
+  "id_view" : "barco",
+  "bounds": [0, 0, 282, 265.6],
+  "position": [166.38, 30],
+  "opacity" : 1,
+  "anchorPoint" : [0, 0],
+  "image" : "barco_3.png",
+  "layers" :[],
+  "animations" : [
+                  {
+                  "id_animation" : "mover_barco_x",
+                  "keyPath" : "transform.translation.x",
+                  "fromValue" : {
+                  "type" : "number",
+                  "value" : 0
+                  },
+                  "toValue" : {
+                  "type" : "number",
+                  "value" : -83
+                  },
+                  "duration" : 3,
+                  "autoreverses" : "YES",
+                  "repeatCount" : "INFINITY",
+                  "timingFunction" : "EaseInEaseOut",
+                  "removedOnCompletion" : "NO"
+                  }
+                  ],
+  "actions" : {
+  "inTime" :
+  [     0.5,
+   [
+    {
+    "layer": "__all_layers_composition__",
+    "anims" : ["mover_barco_x"]
+    }
+    ]
+   ]
+  }
+  },
+  {
+  "id_view" : "marino",
+  "bounds": [0, 0, 77.56, 126.3],
+  "position": [256, 90],
+  "opacity" : 1,
+  "anchorPoint" : [0, 0],
+  "image" : "marinero.png",
+  "layers" :[{
+             "id_layer" : "brazo_layer",
+             "bounds" : [0, 0, 64.2, 70.3],
+             "position" : [66.4, 88.64],
+             "opacity" : 1,
+             "anchorPoint" : [0, 1],
+             "image" : "brazo.png"
+             },
+             {
+             "id_layer" : "gorro_layer",
+             "bounds" : [0, 0, 60.94, 41],
+             "position" : [0, 13.85],
+             "opacity" : 1,
+             "anchorPoint" : [0, 1],
+             "image" : "gorro.png"
+             }],
+  "animations" : [
+                  {
+                  "id_animation" : "mover_brazo",
+                  "keyPath" : "transform.rotation.z",
+                  "fromValue" : {
+                  "type" : "number",
+                  "value" : 0
+                  },
+                  "toValue" : {
+                  "type" : "number",
+                  "value" : -0.8
+                  },
+                  "duration" : 0.5,
+                  "autoreverses" : "YES",
+                  "repeatCount" : 2,
+                  "timingFunction" : "",
+                  "removedOnCompletion" : "NO"
+                  },
+                  {
+                  "id_animation" : "mover_marino",
+                  "keyPath" : "transform.translation.x",
+                  "fromValue" : {
+                  "type" : "number",
+                  "value" : 0
+                  },
+                  "toValue" : {
+                  "type" : "number",
+                  "value" : -83.1
+                  },
+                  "duration" : 3,
+                  "autoreverses" : "YES",
+                  "repeatCount" : "INFINITY",
+                  "timingFunction" : "EaseInEaseOut",
+                  "removedOnCompletion" : "NO"
+                  },
+                  {
+                  "id_animation" : "mover_gorro",
+                  "keyPath" : "transform.translation.y",
+                  "fromValue" : {
+                  "type" : "number",
+                  "value" : 0
+                  },
+                  "toValue" : {
+                  "type" : "number",
+                  "value" : -110.8
+                  },
+                  "duration" : 0.5,
+                  "autoreverses" : "YES",
+                  "repeatCount" : 1,
+                  "timingFunction" : "",
+                  "removedOnCompletion" : "NO"
+                  }
+                  ],
+  "actions" : {
+  "inTime" :
+  [ 0.5, {"userInteractionEnabled" : "YES"},
+   [
+    {
+    "layer": "__all_layers_composition__",
+    "anims" : ["mover_marino"]
+    }
+    ]
+   ],
+  "tap" :
+  [
+   [
+    {
+    "layer": "brazo_layer",
+    "anims" : ["mover_brazo"],
+    "sound" : {"repeat" : 1, "file" : "bell.mp3"}
+    },
+    {
+    "layer": "gorro_layer",
+    "anims" : ["mover_gorro"],
+    "sound" : {"repeat" : 2, "file" : "bell2.mp3"}
+    }
+    ]
+   ]
+  }
+  },
+  {
+  "id_view" : "ola2",
+  "bounds": [0, 0, 762, 195],
+  "position": [-195, 249],
+  "opacity" : 1,
+  "anchorPoint" : [0, 0],
+  "image" : "olas2_4.png",
+  "layers" :[],
+  "animations" : [
+                  {
+                  "id_animation" : "mover_ola_2",
+                  "keyPath" : "transform.translation.x",
+                  "fromValue" : {
+                  "type" : "number",
+                  "value" : 0
+                  },
+                  "toValue" : {
+                  "type" : "number",
+                  "value" : 177
+                  },
+                  "duration" : 3,
+                  "autoreverses" : "YES",
+                  "repeatCount" : "INFINITY",
+                  "timingFunction" : "EaseInEaseOut",
+                  "removedOnCompletion" : "NO"
+                  }
+                  ],
+  "actions" : {
+  "inTime" :
+  [     0.5,
+   [
+    {
+    "layer": "__all_layers_composition__",
+    "anims" : ["mover_ola_2"]
+    }
+    ]
+   ]
+  }
+  },
+  {
+  "id_view" : "star",
+  "bounds": [0, 0, 51.75, 49.8],
+  "position": [32.13, 170],
+  "opacity" : 1,
+  "anchorPoint" : [0.5, 0.5],
+  "image" : "star.png",
+  "layers" :[],
+  "animations" : [
+                  {
+                  "id_animation" : "star-anim-x",
+                  "keyPath" : "transform.translation.x",
+                  "fromValue" : {
+                  "type" : "number",
+                  "value" : 0
+                  },
+                  "toValue" : {
+                  "type" : "number",
+                  "value" : 731
+                  },
+                  "duration" : 3,
+                  "autoreverses" : "NO",
+                  "repeatCount" : 1,
+                  "timingFunction" : "EaseInEaseOut",
+                  "removedOnCompletion" : "NO"
+                  },
+                  {
+                  "id_animation" : "star-anim-y",
+                  "keyPath" : "transform.translation.y",
+                  "fromValue" : {
+                  "type" : "number",
+                  "value" : 0
+                  },
+                  "toValue" : {
+                  "type" : "number",
+                  "value" : -288
+                  },
+                  "duration" : 3,
+                  "autoreverses" : "NO",
+                  "repeatCount" : 1,
+                  "timingFunction" : "EaseInEaseOut",
+                  "removedOnCompletion" : "NO"
+                  },
+                  {
+                  "id_animation" : "star-rotate",
+                  "keyPath" : "transform.rotation.z",
+                  "fromValue" : {
+                  "type" : "number",
+                  "value" : 1.0
+                  },
+                  "toValue" : {
+                  "type" : "number",
+                  "value" : 10.0
+                  },
+                  "duration" : 3,
+                  "autoreverses" : "NO",
+                  "repeatCount" : 0,
+                  "timingFunction" : "EaseInEaseOut",
+                  "removedOnCompletion" : "NO"
+                  },
+                  {
+                  "id_animation" : "alpha_star",
+                  "keyPath" : "opacity",
+                  "fromValue" : {
+                  "type" : "number",
+                  "value" : 1.0
+                  },
+                  "toValue" : {
+                  "type" : "number",
+                  "value" : 0.1
+                  },
+                  "duration" : 3
+                  },
+                  {
+                  "id_animation" : "star_scale",
+                  "keyPath" : "transform.scale",
+                  "fromValue" : {
+                  "type" : "number",
+                  "value" : 1.0
+                  },
+                  "toValue" : {
+                  "type" : "number",
+                  "value" : 0.1
+                  },
+                  "duration" : 3
+                  },
+                  {
+                  "id_animation" : "alpha_star_constant",
+                  "keyPath" : "opacity",
+                  "fromValue" : {
+                  "type" : "number",
+                  "value" : 1.0
+                  },
+                  "toValue" : {
+                  "type" : "number",
+                  "value" : 0.2
+                  },
+                  "autoreverses" : "YES",
+                  "duration" : 1,
+                  "repeatCount" : "INFINITY"
+                  }
+                  ],
+  
+  "actions" : {
+  "inTime" : [0, {"userInteractionEnabled" : "YES"},
+              [{
+               "layer": "__all_layers_composition__",
+               "anims" : ["alpha_star_constant"]
+               }]],
+  "tap" :
+  [
+   [
+    {
+        "layer": "__all_layers_composition__",
+        "anims" : ["star-anim-x", "star-anim-y", "star-rotate", "alpha_star", "star_scale"],
+        "sound" : {"repeat" : 1, "file" : "bell2.mp3"}
+    }
+    ]
+   ]
+  }
+  }
+  
+  
+  ]

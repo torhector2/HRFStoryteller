@@ -1,0 +1,26 @@
+ [
+  {
+  "leftArrow" : "leftiPhone.png",
+  "rightArrow" : "rightiPhone.png",
+  "mainMenu" : "leftiPhone.png",
+  "nextPages": [
+                {
+                "idPage" : "barcoSpritesiP5",
+                "image" : "flecha.png"
+                }
+                ],
+  "prevPages": [
+                {
+                "idPage" : "barcoSpritesiP5",
+                "image" : "flecha.png"
+                }
+                ]
+  },
+  {
+  "id_view" : "fondo1",
+  "bounds": [0, 0, 568, 436],
+  "position": [568, 436],
+  "anchorPoint" : [1, 1],
+  "image" : "fondo1.png"
+  }
+  ]

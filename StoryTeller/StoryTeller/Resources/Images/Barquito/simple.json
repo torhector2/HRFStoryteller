@@ -1,0 +1,41 @@
+ [
+  {
+  "leftArrow" : "left.png",
+  "rightArrow" : "right.png",
+  "mainMenu" : "left.png",
+  "nextPages": [
+                {
+                "idPage" : "barcoSprites",
+                "image" : "flecha.png"
+                }
+                ],
+  "prevPages": [
+                {
+                "idPage" : "barcoSprites",
+                "image" : "flecha.png"
+                }
+                ]
+  },
+  {
+  "id_view" : "fondo1",
+  "bounds": [0, 0, 1024, 768],
+  "position": [1024, 768],
+  "anchorPoint" : [1, 1],
+  "image" : "fondo1.png",
+  "animations" : [
+                  {
+                  "id_animation" : "alpha_fondo",
+                  "keyPath" : "opacity",
+                  "fromValue" : {
+                  "type" : "number",
+                  "value" : 1.0
+                  },
+                  "toValue" : {
+                  "type" : "number",
+                  "value" : 0.1
+                  },
+                  "duration" : 5
+                  }
+                  ]
+  }
+  ]

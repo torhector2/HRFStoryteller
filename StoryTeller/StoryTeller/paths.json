@@ -1,0 +1,99 @@
+ [
+  {
+  "id_view" : "star",
+  "bounds": [0, 0, 124, 120],
+  "position": [100,250],
+  "opacity" : 1,
+  "anchorPoint" : [0.5, 0.5],
+  "image" : "marinero.png",
+  "animations" : [
+                  {
+                  "id_animation" : "curva_quad_bezier",
+                  "path" : "quad_bezier",
+                  "keyPath" : "position",
+                  "startPoint" : [100, 100],
+                  "controlPoints" : [200, 90],
+                  "finalPoints" : [400, 500],
+                  "duration" : 2,
+                  "repeatCount" : 4,
+                  "autoreverses" : "YES",
+                  "rotationMode" : "kCAAnimationRotateAuto",
+                  "calculationMode" : "kCAAnimationCubic"
+                  },
+                  {
+                  "id_animation" : "linear_path",
+                  "path" : "linear_path",
+                  "keyPath" : "position",
+                  "startPoint" : [100, 400],
+                  "finalPoints" : [200, 200, 400, 400, 600, 200],
+                  "calculationMode" : "kCAAnimationPaced",
+                  "duration" : 2
+                  },
+                  {
+                  "id_animation" : "curva_bezier",
+                  "path" : "bezier",
+                  "keyPath" : "position",
+                  "startPoint" : [0, 99],
+                  "controlPoints" : [0, 99, 4, 1],
+                  "finalPoints" : [99, 0],
+                  "duration" : 3,
+                  "rotationMode" : "kCAAnimationRotateAuto",
+                  "calculationMode" : "kCAAnimationPaced"
+                  },
+                  {
+                  "id_animation" : "arc_bezier2",
+                  "path" : "arc_bezier",
+                  "keyPath" : "position",
+                  "finalPoints" : [300, 100, 800, 500],
+                  "radios" : [500],
+                  "rotationMode" : "kCAAnimationRotateAuto",
+                  "calculationMode" : "kCAAnimationPaced",
+                  "duration" : 3
+                  },
+                  {
+                  "id_animation" : "circle_anim",
+                  "path" : "circle_path",
+                  "keyPath" : "position",
+                  "center" : [400, 400],
+                  "radius" : 300,
+                  "startRadians" : 0,
+                  "finishRadians" : 2,
+                  "clock" : "YES",
+                  "duration" : 6,
+                  "repeatCount" : 5,
+                  "rotationMode" : "kCAAnimationRotateAutoReverse",
+                  "calculationMode" : "kCAAnimationLinear"
+                  },
+                  {
+                  "id_animation" : "circle_rect_anim",
+                  "path" : "circle_in_rect_path",
+                  "keyPath" : "position",
+                  "rect" : [100, 100, 1000, 500],
+                  "rotationMode" : "kCAAnimationRotateAutoReverse",
+                  "calculationMode" : "kCAAnimationLinear",
+                  "duration" : 3
+                  },
+                  {
+                  "id_animation" : "svg_path_anim",
+                  "path" : "svg_path",
+                  "keyPath" : "position",
+                  "svg-file" : "BezierCurve1",
+                  "rotationMode" : "kCAAnimationRotateAuto",
+                  "calculationMode" : "kCAAnimationPaced",
+                  "duration" : 3,
+                  "autoreverses" : "YES",
+                  "repeatCount" : "INFINITY"
+                  }
+                  ],
+  
+  "actions" : {
+  "inTime" : [0, {"userInteractionEnabled" : "YES"},
+              [{
+               "layer": "__all_layers_composition__",
+               "anims" : ["svg_path_anim"]
+               }]]
+  }
+  }
+  
+  
+  ]
