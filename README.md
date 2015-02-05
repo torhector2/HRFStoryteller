@@ -84,7 +84,7 @@ Storyteller is a JSON to CoreAnimation conversion library that you could use to 
 ```
 ## JSON Sample
 
-```
+```json
  [
   {"narrative" : {
         "repeat" : 0,
