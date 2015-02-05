@@ -60,3 +60,25 @@ Storyteller is a JSON to CoreAnimation conversion library that you could use to 
     
 }
 ```
+### PageNavigableDelegate
+
+```objc
+- (void) performNextPageWithMetadataDict:(NSDictionary *)theMetaData {
+    NSLog(@"Delegate Next");
+    NSArray *nextPages = [theMetaData objectForKey: kNextPages];
+    [self performNavigationWithArray:nextPages InView:self.view]; //Your custom navigation method
+}
+
+-(void) performPrevPageWithMetadataDict:(NSDictionary *)theMetaData {
+    NSLog(@"Delegate Prev");
+    NSArray *prevPages = [theMetaData objectForKey: kPrevPages];
+    [self performNavigationWithArray:prevPages InView:self.view]; //Your custom method
+}
+
+-(void) manageMainButton {
+    NSLog(@"Delegate Main Menu");
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"You could customize any button action in the screen" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+    [alert show];
+}
+
+```
