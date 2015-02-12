@@ -3,6 +3,10 @@ Storyteller is a JSON to CoreAnimation conversion library that you could use to 
 
 <img src="http://i.giphy.com/3xz2BzhsHzBOKsFWi4.gif"/>
 
+Víctor Jimémez from <a href="https://www.youtube.com/user/pasacotv">PasaCo TV!</a> is working in an awesome tale. You could see his work <a href="https://github.com/capitangolo/HRFStoryteller_Examples">here</a>.
+
+<img src="http://i.giphy.com/3xz2BQfZe2UMFQCEXC.gif" width="480px"/>
+
 ## Installation
 
 1. Drag and drop the AnimationEngine folder to your project.
